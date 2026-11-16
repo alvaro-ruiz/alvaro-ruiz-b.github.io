@@ -1,0 +1,71 @@
+import type { Content } from './types'
+
+export const en: Content = {
+  role: 'Software Engineer | Java | AI & Data',
+  availability: 'Open to relocation across Spain and the EU.',
+  nav: { inicio: 'Home', 'sobre-mi': 'About', proyectos: 'Projects', tecnologias: 'Skills', formacion: 'Education', contacto: 'Contact' },
+  ui: {
+    navigation: 'Navigation',
+    connect: 'Connect with me',
+    viewProjects: 'View projects →',
+    downloadCv: 'Download CV',
+    contactBtn: 'Get in touch',
+    areasOfFocus: 'Focus areas',
+    evolving: 'EVOLVING',
+    experienceTitle: 'Experience and volunteering',
+    viewOnGithub: 'View on GitHub →',
+    projectsLabel: 'Projects',
+    projectsTitle: 'Selected work',
+    skillsLabel: 'Skills',
+    skillsTitle: 'Everyday tools',
+    educationLabel: 'Education',
+    educationTitle: 'Continuous learning',
+    contactLabel: 'Contact',
+    contactTitle: 'Let’s talk',
+    contactText: 'If you have an idea or an opportunity, get in touch.',
+    photoAlt: 'Photo of Álvaro Ruiz',
+    switchLang: 'Switch language',
+  },
+  hero: {
+    eyebrow: 'Development & data portfolio',
+    titleStart: 'I develop software and build solutions based on',
+    titleHighlight: 'data and artificial intelligence.',
+    description: 'I’m Álvaro Ruiz, a junior software developer focused on AI engineering, currently pursuing a Master’s in Data Science & AI at Evolve. I connect code, data and product to turn ideas into digital solutions.',
+    areas: ['Application development', 'Data analysis and modeling', 'AI-powered solutions'],
+  },
+  about: {
+    label: 'About',
+    title: 'AI engineering, built on a developer foundation',
+    text: 'Junior software developer with a Higher Technician qualification in Multiplatform Application Development, now pursuing a Master’s in Data Science & AI. I have built a document-based RAG assistant, NLP workflows and ML applications using Python, LLM APIs, vector databases and REST APIs. I’m interested in developing reliable, practical AI-powered software.',
+    highlights: [
+      { label: 'Machine Learning', title: 'ML and NLP projects', text: 'End-to-end projects using Python, scikit-learn and Hugging Face.' },
+      { label: 'Data', title: 'Data analytics', text: 'Interactive dashboards and data analysis with SQL, Power BI and Python.' },
+      { label: 'Software', title: 'Development background', text: 'Strong programming foundation from a Multiplatform Application Development degree (DAM).' },
+    ],
+    experience: [
+      { period: '01/2026 – Present', title: 'Technical Support Junior', place: 'Peñarroya Informática', text: 'I started as an intern and was later offered a part-time role in the afternoons. I learned how to work with customers, solve problems effectively and perform in a real professional environment.' },
+      { period: '03/2024 – 06/2024', title: 'Door-to-Door Fundraising Collector', place: 'Red Cross', text: 'Recruited new supporters through face-to-face and door-to-door fundraising, strengthening communication, persuasion and teamwork skills.' },
+      { period: 'Present', title: 'Volunteer', place: 'Down Málaga & Gamemotiv', text: 'Supported event organization and led educational and recreational activities for children at risk of social exclusion.' },
+    ],
+  },
+  projects: [
+    { id: 'viktor', category: 'AI · RAG', title: 'Viktor', text: 'Conversational AI assistant using Retrieval-Augmented Generation to answer questions grounded in a custom knowledge base of PDF documents.', tags: ['LangGraph', 'LLM', 'MemorySaver'] },
+    { id: 'neurogym', category: 'App · Mobile', title: 'NeuroGym', text: 'Gym application with authentication, database integration and personalised routine recommendations, integrating external AI/NLP services.', tags: ['Flutter', 'Supabase', 'PostgreSQL', 'APIs'] },
+    { id: 'employability', category: 'Machine Learning', title: 'Disability Employability Prediction', text: 'End-to-end ML project covering preprocessing, model evaluation, feature analysis and a Streamlit application. In progress.', tags: ['Python', 'Pandas', 'Scikit-learn'] },
+    { id: 'superstore', category: 'Data · SQL', title: 'Superstore SQL Pipeline', text: 'Structured SQL pipeline with staging/core layers, analytical views, queries, transactions and validation logic.', tags: ['MySQL', 'SQL', 'Git'] },
+  ],
+  skills: [
+    { group: 'Programming', items: ['Java', 'Python', 'C', 'JavaScript', 'SQL'] },
+    { group: 'Backend & Development', items: ['Git', 'REST APIs', 'GitHub', 'MySQL', 'PostgreSQL'] },
+    { group: 'Software Practices', items: ['OOP', 'Databases', 'API Integration', 'Troubleshooting'] },
+    { group: 'Data & AI', items: ['Machine Learning', 'Scikit-learn', 'NLP', 'NumPy', 'Pandas'] },
+    { group: 'Tools', items: ['VS Code', 'Jupyter', 'Streamlit'] },
+  ],
+  education: {
+    items: [
+      { period: '01/2026 – 10/2026', title: 'Master of Data Science & AI', place: 'Evolve', text: 'Developing advanced models and learning how to extract valuable insights from data.', tags: ['Python', 'Machine Learning', 'Deep learning'] },
+      { period: '09/2023 – 2025', title: 'Higher Technician in Multiplatform Application Development', place: 'IES Pablo Picasso', text: '', tags: ['Java', 'SQL', 'Git'] },
+    ],
+    languages: 'Languages: Spanish (native) · English (B1-B2)',
+  },
+}

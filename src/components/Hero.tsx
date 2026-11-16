@@ -1,9 +1,13 @@
-import { hero, profile } from '../data/content'
+import { profile } from '../data/profile'
+import { useLang } from '../i18n'
 import HeroVisual from './HeroVisual'
 import { Mono } from './ui'
 
 export default function Hero() {
-  const cv = profile.cvUrl ? `${import.meta.env.BASE_URL}${profile.cvUrl}` : ''
+  const { lang, t } = useLang()
+  const hero = t.hero
+  const cvFile = profile.cvUrl[lang]
+  const cv = cvFile ? `${import.meta.env.BASE_URL}${cvFile}` : ''
   return (
     <section id="inicio" className="grid items-center gap-10 border-b border-line px-5 py-14 lg:min-h-screen lg:grid-cols-2 lg:gap-14 lg:px-16 lg:py-20">
       <div>
@@ -15,12 +19,12 @@ export default function Hero() {
         <p className="max-w-[30em] text-lg text-mu">{hero.description}</p>
         <div className="mt-9 flex flex-wrap gap-3.5">
           <a href="#proyectos" className="rounded-lg bg-ac px-6 py-4 font-semibold text-[#04202a] shadow-[0_0_30px_#2ee6ff40] hover:brightness-110">
-            Ver proyectos →
+            {t.ui.viewProjects}
           </a>
           {cv ? (
-            <a href={cv} download className="rounded-lg border border-line px-6 py-4 font-semibold hover:border-ac">Descargar CV</a>
+            <a href={cv} download className="rounded-lg border border-line px-6 py-4 font-semibold hover:border-ac">{t.ui.downloadCv}</a>
           ) : (
-            <a href="#contacto" className="rounded-lg border border-line px-6 py-4 font-semibold hover:border-ac">Contactar</a>
+            <a href="#contacto" className="rounded-lg border border-line px-6 py-4 font-semibold hover:border-ac">{t.ui.contactBtn}</a>
           )}
         </div>
       </div>

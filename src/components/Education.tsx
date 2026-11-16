@@ -1,9 +1,11 @@
-import { education } from '../data/content'
+import { useLang } from '../i18n'
 import { Card, Mono, Section, Tag } from './ui'
 
 export default function Education() {
+  const { t } = useLang()
+  const education = t.education
   return (
-    <Section id="formacion" label="Formación" title="Aprendizaje continuo">
+    <Section id="formacion" label={t.ui.educationLabel} title={t.ui.educationTitle}>
       <div className="grid gap-4 md:grid-cols-2">
         {education.items.map((e) => (
           <Card key={e.title}>

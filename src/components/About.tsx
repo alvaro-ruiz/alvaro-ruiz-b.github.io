@@ -1,9 +1,11 @@
-import { about } from '../data/content'
+import { useLang } from '../i18n'
 import { Card, Mono, Section } from './ui'
 
 export default function About() {
+  const { t } = useLang()
+  const about = t.about
   return (
-    <Section id="sobre-mi" label="Sobre mí" title={about.title}>
+    <Section id="sobre-mi" label={about.label} title={about.title}>
       <p className="max-w-[40em] text-lg text-mu">{about.text}</p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {about.highlights.map((h) => (
@@ -14,7 +16,7 @@ export default function About() {
           </Card>
         ))}
       </div>
-      <Mono className="mt-10 block">Experiencia y voluntariado</Mono>
+      <Mono className="mt-10 block">{t.ui.experienceTitle}</Mono>
       <div className="mt-4 grid gap-4 md:grid-cols-2">
         {about.experience.map((e) => (
           <Card key={e.title + e.period}>

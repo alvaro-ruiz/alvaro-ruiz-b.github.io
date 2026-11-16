@@ -1,4 +1,4 @@
-import { nav } from './data/content'
+import { sectionIds } from './data/profile'
 import About from './components/About'
 import Contact from './components/Contact'
 import Education from './components/Education'
@@ -8,10 +8,8 @@ import Sidebar from './components/Sidebar'
 import Skills from './components/Skills'
 import { useActiveSection } from './components/useActiveSection'
 
-const ids = nav.map((n) => n.id)
-
 export default function App() {
-  const active = useActiveSection(ids)
+  const active = useActiveSection(sectionIds)
   return (
     <>
       <Sidebar active={active} />

@@ -1,16 +1,17 @@
-import { hero } from '../data/content'
+import { useLang } from '../i18n'
 import { Mono } from './ui'
 
 export default function HeroVisual() {
+  const { t } = useLang()
   return (
     <div className="overflow-hidden rounded-[28px] border border-[#1b3350] bg-gradient-to-br from-[#0e2139] to-[#09162a]">
       <div className="flex items-center justify-between border-b border-line px-7 py-6">
         <div>
-          <Mono className="text-[10px]">Áreas de enfoque</Mono>
+          <Mono className="text-[10px]">{t.ui.areasOfFocus}</Mono>
           <b className="mt-1.5 block font-semibold">Software × Data × AI</b>
         </div>
         <span className="rounded-full border border-[#1d6f86] bg-[#0b2f3f] px-3.5 py-2 font-mono text-[10px] tracking-widest text-ac">
-          ● EN EVOLUCIÓN
+          ● {t.ui.evolving}
         </span>
       </div>
       <svg viewBox="0 0 480 300" className="block h-auto w-full" aria-hidden="true">
@@ -38,7 +39,7 @@ export default function HeroVisual() {
         </g>
       </svg>
       <div className="grid grid-cols-3 border-t border-line">
-        {hero.areas.map((a, i) => (
+        {t.hero.areas.map((a, i) => (
           <div key={a} className="border-r border-line p-5 text-[11px] text-mu last:border-r-0">
             <span className="mb-2.5 block font-mono text-ac">0{i + 1}</span>
             {a}
